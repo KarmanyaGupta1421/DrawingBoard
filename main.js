@@ -19,6 +19,7 @@ function draw_circle() {
         ctx.clearRect(0, 0, 400, 400);
         ctx.beginPath();
         ctx.strokeStyle = "#FFD369";
+        ctx.lineWidth = 2;
         ctx.arc(200, 200, r, 0, 2 * Math.PI);
         ctx.stroke();
     }
@@ -57,6 +58,7 @@ function draw_rect() {
         ctx.clearRect(0, 0, 400, 400);
         ctx.beginPath();
         ctx.strokeStyle = "#FFD369";
+        ctx.lineWidth = 2;
         ctx.rect(200 - w / 2, 200 - h / 2, w, h);
         ctx.stroke();
 
