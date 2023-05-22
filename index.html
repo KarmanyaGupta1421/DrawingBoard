@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Board</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax : {inlineMath: [['$','$'],['\\(','\\)']]} });
+    </script>
+
+</head>
+
+<body>
+    <h1>Drawing Board</h1>
+    <!-- <hr> -->
+    <p>This webpage helps you to visualize simple geometrical shapes such as circle and rectangle.</p>
+
+    <div class="container">
+        <div class="circle">
+
+            <h2>Circle</h2>
+            <p>The $area$ of a circle with radius $r$ is given by $ \pi r ^2 $. Similarly, the $perimeter$ of a circle
+                with radius $r$ is given by $2 \pi r$. Now let's visualize the circle using JavaScript and HTML.</p>
+
+            <form>
+                <label for="radius">Enter the radius $r$ : </label>
+                <input type="number" id="radius" class="inpt"> <br><br>
+                <button type="button" class="btn" onclick="circle_validate()">Validate Radius</button>
+                <button type="button" class="btn" onclick="draw_circle()">Draw</button>
+                <button type="button" class="btn" onclick="circle_area_peri()">Compute Area/Perimeter</button>
+                <button type="reset" class="btn">Clear Inputs</button>
+            </form>
+
+            <br>
+
+            <canvas id="paper1" width="400px" height="400px">
+                Your browser doesn't support canvas
+            </canvas>
+            <p class="caption">Paper size : 400px X 400px</p>
+
+        </div>
+
+        <!-- <br>
+        <hr> -->
+
+        <div class="rectangle">
+
+            <h2>Rectangle</h2>
+            <p>The $area$ of a rectangle with width $w$ and height $h$ is given by $a \cdot b$. Similarly, the
+                $perimeter$ of a rectangle with width $a$ and height $b$ is given by $2 \cdot (w+h) $. Now, let's
+                visualize the rectanble using JavaScript and HTML.</p>
+
+            <form>
+                <label for="width">Enter the width $w$ : </label>
+                <input type="number" id="width" class="inpt">
+                <label for="height">Enter the height $h$ : </label>
+                <input type="number" id="height" class="inpt" > <br><br>
+
+                <button type="button" class="btn" onclick="rect_validate()">Validate width/height</button>
+                <button type="button" class="btn" onclick="draw_rect()">Draw</button>
+                <button type="button" class="btn" onclick="rect_area_peri()">Compute Area/Perimeter</button>
+                <button type="reset" class="btn">Clear Inputs</button>
+            </form>
+
+            <br>
+
+            <canvas id="paper2" width="400px" height="400px">
+                Your browser doesn't support canvas
+            </canvas>
+            <p class="caption">Paper size : 400px X 400px</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Javascript Below -->
+
+    <script src="main.js"></script>
+</body>
+
+</html>
