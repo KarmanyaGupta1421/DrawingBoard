@@ -35,6 +35,11 @@ function circle_validate() {
     }
 }
 
+function clear_circle(){
+    var ctx = document.getElementById('paper1').getContext("2d");
+    ctx.clearRect(0, 0, 400, 400);
+}
+
 function rect_area_peri() {
     let w = document.getElementById("width").value;
     let h = document.getElementById("height").value;
@@ -66,6 +71,11 @@ function draw_rect() {
             alert("This rectangle is a square :)");
         }
     }
+}
+
+function clear_rect(){
+    var ctx = document.getElementById("paper2").getContext("2d");
+    ctx.clearRect(0, 0, 400, 400);
 }
 
 function rect_validate() {
